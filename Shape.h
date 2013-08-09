@@ -71,7 +71,7 @@ struct Circle : public Shape
   {
     body->m = PI * radius * radius * density;
     body->im = (body->m) ? 1.0f / body->m : 0.0f;
-    body->I = body->m * radius * radius;
+    body->I = 0.5f * body->m * radius * radius;
     body->iI = (body->I) ? 1.0f / body->I : 0.0f;
   }
 
